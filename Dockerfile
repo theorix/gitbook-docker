@@ -1,8 +1,8 @@
 FROM node:6-slim
 
-MAINTAINER Roman Krivetsky <r.krivetsky@gmail.com>
+MAINTAINER JinHai <zoujinhai@yeah.net>
 
-ARG VERSION=3.2.1
+ARG VERSION=3.2.3
 
 LABEL version=$VERSION
 
@@ -11,9 +11,9 @@ RUN npm install --global gitbook-cli &&\
 	npm cache clear &&\
 	rm -rf /tmp/*
 
-WORKDIR /srv/gitbook
+WORKDIR /gitbook
 
-VOLUME /srv/gitbook /srv/html
+VOLUME /gitbook
 
 EXPOSE 4000 35729
 
